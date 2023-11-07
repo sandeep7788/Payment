@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/fram_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            android:visibility="gone"
+            layout="@layout/toolbar_layout1"/>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="@color/white"/>-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/header_cover_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/button_shape_no_filltwo" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profile_photo"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/header_cover_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-60dp"
+                        android:elevation="5dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/white"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/bg" />
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profile_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/header_cover_image"
+                        android:background="#277448"
+                        android:elevation="4dp"
+                        android:paddingBottom="24dp">
+
+
+                        <ImageView
+                            android:id="@+id/edt_icon"
+                            android:layout_width="40dp"
+                            android:visibility="gone"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="right"
+                            android:backgroundTint="@color/gray_btn_bg_pressed_color"
+                            android:baselineAlignBottom="true"
+                            android:elevation="4dp"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_baseline_edit_24"
+                            app:layout_constraintBottom_toTopOf="@+id/user_profile_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.69"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+
+                        <TextView
+                            android:id="@+id/user_profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pelumi Eniodunmo"
+                            android:textColor="#fff"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/user_profile_short_bio"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/user_profile_short_bio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_profile_name"
+                            android:layout_centerHorizontal="true"
+                            android:text="UI/UX, Android developer, Software and AI Engineer"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/txt_member_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/worksans_medium"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Admin"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="35dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:orientation="horizontal"
+                            android:textColorHint="#ffffff">
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_name"
+                            style="@style/EmailTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="First Name"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white_color"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_Type"
+                            style="@style/EmailTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="User Type"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_number"
+                            style="@style/EmailTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="Mobile Number"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_email"
+                            android:layout_width="match_parent"
+                            style="@style/EmailTextInputEditText"
+                            android:layout_height="wrap_content"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_wallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/EmailTextInputEditText"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="wallet"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_ewallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/EmailTextInputEditText"
+
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="E wallet"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtZipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/EmailTextInputEditText"
+                            
+                            android:backgroundTint="@color/white_color"
+                            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            android:hint="ZIP CODE"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/gray_btn_bg_pressed_color"
+                            android:textSize="15dp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</layout>

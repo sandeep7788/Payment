@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="isDth"
+            type="Boolean" />
+
+        <variable
+            name="isRec"
+            type="Boolean" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <include
+                android:id="@+id/toolbar_layout1"
+                layout="@layout/toolbar_layout2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/top_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    android:elevation="9dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="4dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/prepaid_and_semilar_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingRight="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:paddingBottom="25dp"
+                        android:paddingLeft="9dp"
+                        android:layout_marginTop="12dp">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/layRecharge"
+                            android:layout_width="match_parent"
+                            android:elevation="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="4dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/gray_btn_bg_color"
+                            android:orientation="vertical"
+                            android:layout_margin="12dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/l1"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/border"
+                                android:layout_height="55dp">
+
+                                <EditText
+                                    android:id="@+id/edtAcNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="4dp"
+                                    android:maxLength="20"
+                                    android:textColor="@color/text_color"
+                                    android:layout_marginStart="16dp"
+                                    android:paddingStart="8dp"
+                                    android:layout_height="45dp"
+                                    android:textColorHint="@color/gray_btn_bg_color"
+                                    android:backgroundTint="@color/white"
+                                    android:hint="Enter Account No."
+                                    android:textSize="@dimen/text"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/intel"
+                                    android:inputType="phone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/image"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:src="@drawable/bank"
+                                    app:tint="@color/gray_color"
+                                    android:textSize="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="@+id/edtNumber"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:elevation="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="4dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/gray_btn_bg_color"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:background="@drawable/border"
+                                android:id="@+id/l2"
+                                android:layout_height="wrap_content"
+                                android:minHeight="55dp">
+
+                                <TextView
+                                    android:id="@+id/edtBank"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="50dp"
+                                    android:paddingStart="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_color"
+                                    android:minHeight="45dp"
+                                    android:textColorHint="@color/gray_btn_bg_color"
+                                    android:backgroundTint="@color/white"
+                                    android:hint="Select Bank"
+                                    android:textSize="@dimen/text"
+                                    android:gravity="center|start"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/intel"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                                    android:textSize="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="@+id/edtOperator"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/gray_color" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:elevation="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="4dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/gray_btn_bg_color"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:background="@drawable/border"
+
+                                android:id="@+id/l3"
+                                android:layout_height="55dp">
+
+                                <EditText
+                                    android:id="@+id/edtBeneName"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginStart="16dp"
+                                    android:paddingStart="8dp"
+                                    android:textColor="@color/text_color"
+                                    android:layout_height="45dp"
+                                    android:textColorHint="@color/gray_btn_bg_color"
+                                    android:backgroundTint="@color/white"
+                                    android:hint="Beneficiary Name"
+                                    android:inputType="textPersonName"
+                                    android:textSize="@dimen/text"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/intel"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/txtBeneNameFetch"
+                                    android:layout_width="75dp"
+                                    android:layout_height="35dp"
+                                    android:elevation="4dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:visibility="gone"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:background="@drawable/bg_gradient1"
+                                    android:text="Get Name"
+                                    android:textSize="8dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="@+id/edtBeneName"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:elevation="8dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="4dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/gray_btn_bg_color"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/l4"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/border"
+                                android:layout_height="55dp">
+
+                                <EditText
+                                    android:id="@+id/edtIfsc"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="4dp"
+                                    android:maxLength="20"
+                                    android:layout_marginStart="16dp"
+                                    android:paddingStart="8dp"
+                                    android:layout_height="45dp"
+                                    android:textColor="@color/text_color"
+                                    android:textColorHint="@color/gray_btn_bg_color"
+                                    android:backgroundTint="@color/white"
+                                    android:hint="Enter IFSC Code"
+                                    android:textSize="@dimen/text"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/intel"
+                                    android:inputType="text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:src="@drawable/baseline_key_24"
+                                    app:tint="@color/gray_color"
+                                    android:textSize="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="@+id/edtIfsc"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="8dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center|start"
+                            android:visibility="gone"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_gravity="center|start"
+                            android:text="Note: Get Name is account verification feature and would be chargeable with ₹5."
+                            android:paddingStart="8dp"
+                            android:textColor="@color/red_btn_bg_pressed_color"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/edtBeneName"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="3.0dip">
+                            <Button
+                                android:id="@+id/btn_process"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+
+                                android:background="@drawable/blue_button_background"
+                                android:fontFamily="@font/baloo"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:text="Verify &amp; Submit"
+                                android:textColor="#ffffff"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                            <ProgressBar
+                                android:id="@+id/main_progress"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:foregroundGravity="center"
+                                android:elevation="100dp"
+                                android:visibility="visible"
+                                android:progressTint="@color/theame_dark"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!--
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_marginLeft="12dp">
+
+                                    <TextView
+                                        android:id="@+id/txt_viewAll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/worksans_medium"
+                                        android:padding="2dp"
+                                        android:text="View All"
+                                        android:textColor="@color/c_blue"
+                                        android:textSize="@dimen/text_small"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/worksans_medium"
+                                        android:padding="2dp"
+                                        android:text="Recent Recharges"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_small"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="fill_parent"
+                                            app:cardCornerRadius="9dp"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_marginLeft="2dp">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <FrameLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="fill_parent">
+
+                                                    <ImageView
+                                                        android:id="@+id/img_emptylist"
+                                                        android:layout_width="85dp"
+                                                        android:layout_height="85dp"
+                                                        android:src="@drawable/openedwhitebox"
+                                                        android:layout_gravity="center"
+                                                        android:padding="4dp"
+                                                        android:tint="@color/them_dark_color"
+                                                        android:visibility="gone"/>
+
+                                                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                                                        android:id="@+id/main_swiperefresh"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent">
+
+                                                        <androidx.recyclerview.widget.RecyclerView
+                                                            android:id="@+id/main_recycler"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:clipToPadding="false"
+                                                            android:paddingTop="4dp"
+                                                            android:paddingBottom="1dp"
+                                                            android:splitMotionEvents="false"/>
+
+                                                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+                                                </FrameLayout>
+
+
+
+
+                                            </LinearLayout>
+
+
+                                        </androidx.cardview.widget.CardView>
+                    -->
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

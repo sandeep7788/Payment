@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="10"
+    android:background="@color/intro2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:paddingLeft="32dp"
+        android:paddingRight="29dp"
+        android:textColor="#ffffff"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_margin="75dp"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:fontFamily="@font/baloo"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:text="Business Correspondent is an extended arm of the Bank Branch who is providing Financial and Banking services to the customers in unbanked and underbanked areas."
+        android:textColor="@color/text_color"
+        android:textSize="14dp"  />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="62dp" />
+</LinearLayout>

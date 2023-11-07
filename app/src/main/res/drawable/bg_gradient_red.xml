@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <!-- Gradient Background -->
+    <item android:top="3.0dip" android:right="3.0dip" android:bottom="3.0dip" android:left="3.0dip">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="180"
+                android:endColor="@color/red_btn_bg_color"
+                android:startColor="#FF0000"
+                android:type="linear"
+                android:gradientRadius="25dp"/>
+            <corners android:radius="25dp" /> <!-- Round corners, should match the shadow's corner radius -->
+        </shape>
+    </item>
+</layer-list>
