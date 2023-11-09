@@ -12,6 +12,7 @@ object ApiContants {
         const val getDmtBankList = "getDmtBankList"
         const val rechargeAuth = "rechargeAuth"
         const val loginAuth = "loginAuth"
+        const val updateUserData = "updateUserData"
         const val userDetail = "userDetail"
         const val changePassword = "changePassword"
 

@@ -31,16 +31,31 @@
     <color name="red_btn_bg_color">#ffdd6b55</color>
 
     <color name="gpvch_black">#212642</color>
-    <color name="theme_color_light">#E1FFEE</color>
-    <color name="theme_color_light2">#9EFFC8</color>
-    <color name="theme_color2">@color/intro3</color>
-<!--    <color name="theme_color2">#44E589</color>-->
-    <color name="background">#F6F6F6</color>
 
-    <color name="intro1">#9EFFC8</color>
-    <color name="intro2">#93FBBF</color>
-    <color name="intro3">#44E589</color>
-    <color name="theame_dark">#277448</color>
+
+<!--    <color name="theme_color_light">#E1FFEE</color>-->
+<!--    <color name="theme_color_light2">#9EFFC8</color>-->
+<!--    <color name="theme_color2">#44E589</color>-->
+
+<!--    <color name="theme_color_light">#9fa8da</color>-->
+    <color name="theme_color_light">#253b80</color>
+    <color name="theme_color_light2">#253b80</color>
+    <color name="theme_color2">#253b80</color>
+
+<!--    <color name="theme_color2">#44E589</color>-->
+    <color name="background_main">#e5eff6</color>
+    <color name="background_main1">#2997d8</color>
+
+    <color name="intro1">@color/theme_color_light2</color>
+<!--    <color name="intro2">#93FBBF</color>-->
+    <color name="intro2">#2997d8</color>
+    <color name="intro3">@color/theme_color2</color>
+<!--    <color name="theame_dark">#277448</color>-->
+    <color name="theame_dark">@color/theme_color2</color>
+    <color name="theame_tint">#accee3</color>
+
+
+
 
 <!--
 1 : #E1FFEE

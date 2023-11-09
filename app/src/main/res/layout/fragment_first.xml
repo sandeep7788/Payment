@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/background_main">
 
 <!--        <androidx.appcompat.widget.Toolbar-->
 <!--            android:layout_width="match_parent"-->
@@ -776,7 +776,7 @@
                             android:layout_marginStart="8dp"
                             android:foregroundGravity="center"
                             android:padding="10dp"
-                            android:src="@drawable/icon_bbps" />
+                            android:src="@drawable/icon_two" />
 
 
                         <TextView
@@ -863,7 +863,7 @@
                     android:elevation="10dp"
                     android:outlineSpotShadowColor="@color/black"
                     android:paddingBottom="15dp"
-                    app:cardBackgroundColor="#ffffff"
+                    app:cardBackgroundColor="@color/theame_dark"
                     app:cardCornerRadius="4dp"
                     app:contentPaddingBottom="25dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -929,8 +929,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Boardband Bill"
-                                    android:textColor="@color/text_color"
+                                    android:text="Boardband"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -963,8 +963,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Elictric Bill"
-                                    android:textColor="@color/text_color"
+                                    android:text="Electric"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
                             <LinearLayout
@@ -996,8 +996,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Cabel TV"
-                                    android:textColor="@color/text_color"
+                                    android:text="Cable"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1031,7 +1031,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="Credit Card"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1076,8 +1076,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Mobile Bill"
-                                    android:textColor="@color/text_color"
+                                    android:text="Mobile"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1110,8 +1110,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Water Bill"
-                                    android:textColor="@color/text_color"
+                                    android:text="Water"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1144,8 +1144,8 @@
                                     android:fontFamily="@font/intel"
                                     android:foregroundGravity="center"
                                     android:gravity="center"
-                                    android:text="Ladline Bill"
-                                    android:textColor="@color/text_color"
+                                    android:text="Landline"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1179,7 +1179,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="LPG Gas"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1221,7 +1221,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="Municipal Tax"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1255,7 +1255,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="Piped Gas"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 
@@ -1290,7 +1290,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="Loan Payment"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
                             <LinearLayout
@@ -1323,7 +1323,7 @@
                                     android:foregroundGravity="center"
                                     android:gravity="center"
                                     android:text="Insurance"
-                                    android:textColor="@color/text_color"
+                                    android:textColor="@color/white"
                                     android:textSize="@dimen/text" />
                             </LinearLayout>
 

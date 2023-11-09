@@ -10,6 +10,7 @@
     android:shadowRadius="@integer/material_motion_duration_short_1"
     android:visibility="visible"
     app:cardCornerRadius="@dimen/txt_25sp"
+    android:background="@color/background_main"
     app:cardElevation="8dp"
     android:layout_gravity="center"
     android:foregroundGravity="center"

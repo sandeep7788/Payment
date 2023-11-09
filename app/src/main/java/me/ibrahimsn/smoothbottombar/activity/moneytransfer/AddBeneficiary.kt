@@ -95,6 +95,11 @@ class AddBeneficiary : AppCompatActivity(), OnDataPassListener {
                     binding.l4.setBackgroundResource(R.drawable.edit_txt_error)
                     Utility.hideKeyboard(this)
                 }
+                binding.edtBenNumber.text.isEmpty() -> {
+                    Utility.showSnackBar(this, "Please enter your Beneficiary Number")
+                    binding.l5.setBackgroundResource(R.drawable.edit_txt_error)
+                    Utility.hideKeyboard(this)
+                }
                 else -> {
                     Utility.hideKeyboard(this)
                     dmtBeneficiaryAuth()
@@ -165,10 +170,14 @@ class AddBeneficiary : AppCompatActivity(), OnDataPassListener {
         })
     }
 
-    var BenNumber =MyApplication.ReadStringPreferences(PREF_BEN_NUM);
+    var BenNumber ="";//=MyApplication.ReadStringPreferences(PREF_BEN_NUM);
     var remitter_mobile =MyApplication.ReadStringPreferences(PREF_REME);
 
     private fun dmtBeneficiaryAuth() {
+
+        MyApplication.writeStringPreference(ApiContants.PREF_BEN_NUM, binding.edtBenNumber.text.toString())
+        BenNumber= binding.edtBenNumber.text.toString();
+
         progressDialog!!.show()
         val apiInterface: ApiInterface? =
             RetrofitManager().instanceNew(this@AddBeneficiary)?.create(ApiInterface::class.java)
@@ -176,7 +185,7 @@ class AddBeneficiary : AppCompatActivity(), OnDataPassListener {
         apiInterface!!.dmtBeneficiaryAuth(
             userId?.trim(),
             binding.edtBeneName.text.toString(),
-            BenNumber,
+            binding.edtBenNumber.text.toString(),
             binding.edtAcNumber.text.toString(),
             binding.edtIfsc.text.toString(),
             bankId,

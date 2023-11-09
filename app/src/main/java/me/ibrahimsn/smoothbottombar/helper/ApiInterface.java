@@ -181,6 +181,12 @@ public interface ApiInterface {
     Call<UserModel> loginAuth(@Field("username") String username,
                               @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST(ApiContants.updateUserData)
+    Call<JsonObject> updateUserData(@Field("userID") String userID,
+                              @Field("name") String name,
+                                   @Field("photo") String photo);
+
 
 
     @FormUrlEncoded

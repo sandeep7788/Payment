@@ -11,7 +11,7 @@
         android:id="@+id/fram_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/background_main"
         android:orientation="vertical">
 
         <include
@@ -60,7 +60,7 @@
                         android:padding="12dp"
                         android:scaleType="centerCrop"
                         android:backgroundTint="@color/white"
-                        android:src="@drawable/bg" />
+                        android:src="@drawable/baseline_person_24" />
 
 
 
@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_below="@+id/header_cover_image"
-                        android:background="#277448"
+                        android:background="@color/theame_dark"
                         android:elevation="4dp"
                         android:paddingBottom="24dp">
 
